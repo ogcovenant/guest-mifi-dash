@@ -4,7 +4,7 @@ import { FaBell } from "react-icons/fa6";
 
 const Header = () => {
   return (
-    <div className="flex">
+    <div className="flex h-full">
       <div className="w-[15%] bg-[#0F0D38] p-4 flex justify-center py-6">
         <Logo isDark={false} />
       </div>

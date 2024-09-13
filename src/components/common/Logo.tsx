@@ -1,3 +1,5 @@
+"use client"
+
 import { ILogo } from "@/types/components";
 import React from "react";
 
