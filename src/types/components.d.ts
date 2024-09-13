@@ -6,7 +6,7 @@ export interface ILogo {
 }
 
 export interface ISidebarItem {
-  active: boolean,
+  active?: boolean,
   icon: IconType,
   title: string
 }

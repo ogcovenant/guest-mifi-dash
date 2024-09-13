@@ -7,13 +7,15 @@ import { TbChartBubbleFilled } from "react-icons/tb";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { FcAddImage } from "react-icons/fc";
 import SidebarItem from "../sidebar/SidebarItem";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoPowerOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   const active = SidebarStore.useState((s) => s.active);
 
   return (
-    <div className="w-[15%] bg-[#211E48]">
-      <ul className="mt-12">
+    <div className="w-[15%] bg-[#211E48] flex flex-col justify-between">
+      <ul className="">
         <li>
           <a href="/dashboard">
             <SidebarItem
@@ -60,6 +62,14 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+      <div className="border-t-[1px] border-[#3C3980]">
+        <ul>
+          <li>
+            <SidebarItem icon={IoSettingsOutline} title="Settings"/>
+            <SidebarItem icon={IoPowerOutline} title="Logout"/>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
