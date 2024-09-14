@@ -19,7 +19,7 @@ export default function DashboardLayout({
         s.active = "dashboard";
       });
     }
-    if (pathname === "/dashboard/partners") {
+    if (pathname === "/dashboard/partners" || pathname.includes("/dashboard/partners")) {
       SidebarStore.update((s) => {
         s.active = "partners";
       });

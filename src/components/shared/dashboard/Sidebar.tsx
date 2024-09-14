@@ -9,64 +9,82 @@ import { FcAddImage } from "react-icons/fc";
 import SidebarItem from "../sidebar/SidebarItem";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoPowerOutline } from "react-icons/io5";
+import { IAccordionItemType } from "@/types/components";
 
 const Sidebar = () => {
+
+  const partnerPageLinks: IAccordionItemType[] = [
+    {
+      title: "Countries",
+      link: "/dashboard/partners/countries"
+    },
+    {
+      title: "City",
+      link: "/dashboard/partners/cities"
+    },
+    {
+      title: "Partner",
+      link: "/dashboard/partners/partner"
+    },
+    {
+      title: "New Distributor",
+      link: "/dashboard/partners/new"
+    }
+  ]
+
+
   const active = SidebarStore.useState((s) => s.active);
 
   return (
-    <div className="w-[15%] bg-[#211E48] flex flex-col justify-between">
+    <div className="w-[15%] bg-[#211E48] flex flex-col justify-between overflow-auto">
       <ul className="">
         <li>
-          <a href="/dashboard">
-            <SidebarItem
-              icon={MdDashboard}
-              active={active === "dashboard" ? true : false}
-              title="Dashboard"
-            />
-          </a>
+          <SidebarItem
+            icon={MdDashboard}
+            active={active === "dashboard" ? true : false}
+            title="Dashboard"
+            link="/dashboard"
+          />
         </li>
         <li>
-          <a href="/dashboard/partners">
-            <SidebarItem
-              icon={MdPeople}
-              active={active === "partners" ? true : false}
-              title="Partners"
-            />
-          </a>
+          <SidebarItem
+            icon={MdPeople}
+            active={active === "partners" ? true : false}
+            title="Partners"
+            link="/dashboard/partners"
+            accordionItems={partnerPageLinks}
+          />
         </li>
         <li>
-          <a href="/dashboard/data-providers">
-            <SidebarItem
-              icon={TbChartBubbleFilled}
-              active={active === "data-providers" ? true : false}
-              title="Data Providers"
-            />
-          </a>
+          <SidebarItem
+            icon={TbChartBubbleFilled}
+            active={active === "data-providers" ? true : false}
+            title="Data Providers"
+            link="/dashboard/data-providers"
+          />
         </li>
         <li>
-          <a href="/dashboard/earnings">
-            <SidebarItem
-              icon={MdAccountBalanceWallet}
-              active={active === "earnings" ? true : false}
-              title="Earnings"
-            />
-          </a>
+          <SidebarItem
+            icon={MdAccountBalanceWallet}
+            active={active === "earnings" ? true : false}
+            title="Earnings"
+            link="/dashboard/earnings"
+          />
         </li>
         <li>
-          <a href="/dashboard/add-product">
-            <SidebarItem
-              icon={FcAddImage}
-              active={active === "add-product" ? true : false}
-              title="Add Product"
-            />
-          </a>
+          <SidebarItem
+            icon={FcAddImage}
+            active={active === "add-product" ? true : false}
+            title="Add Product"
+            link="/dashboard/add-product"
+          />
         </li>
       </ul>
       <div className="border-t-[1px] border-[#3C3980]">
         <ul>
           <li>
-            <SidebarItem icon={IoSettingsOutline} title="Settings"/>
-            <SidebarItem icon={IoPowerOutline} title="Logout"/>
+            <SidebarItem icon={IoSettingsOutline} title="Settings" />
+            <SidebarItem icon={IoPowerOutline} title="Logout" />
           </li>
         </ul>
       </div>
