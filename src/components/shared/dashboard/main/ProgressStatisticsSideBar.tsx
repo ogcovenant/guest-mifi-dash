@@ -32,7 +32,7 @@ const ProgressStatisticsSideBar = () => {
       color: "#DEFF99",
     },
     inactive: {
-      label: "inActive",
+      label: "inactive",
       color: "#D83BFF",
     },
   } satisfies ChartConfig;
