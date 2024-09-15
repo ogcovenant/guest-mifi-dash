@@ -45,7 +45,7 @@ const SidebarItem = ({
             <AccordionContent className="px-8 mt-2">
               <ul>
                 {accordionItems?.map((item) => (
-                  <a href={item.link}>
+                  <a href={item.link} key={item.title}>
                     <li className={`p-3 ${pathname === item.link ? "text-[#56C7FF] font-bold bg-[#2A2757]" : "text-[#CFCFD1]"}`}>{item.title}</li>
                   </a>
                 ))}
