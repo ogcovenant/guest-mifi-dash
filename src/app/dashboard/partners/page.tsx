@@ -170,17 +170,17 @@ const page = () => {
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
                       <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>1900</p>
                   </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
                       <p className="bg-[#FFC37C] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>100</p>
                   </div>
                 </TableCell>
@@ -202,17 +202,17 @@ const page = () => {
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
                       <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>1900</p>
                   </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
                       <p className="bg-[#FFC37C] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>100</p>
                   </div>
                 </TableCell>
@@ -234,17 +234,17 @@ const page = () => {
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
                       <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>1900</p>
                   </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
                       <p className="bg-[#FFC37C] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>100</p>
                   </div>
                 </TableCell>
@@ -266,17 +266,17 @@ const page = () => {
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
                       <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>1900</p>
                   </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
                       <p className="bg-[#FFC37C] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>100</p>
                   </div>
                 </TableCell>
@@ -298,17 +298,17 @@ const page = () => {
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
                       <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>1900</p>
                   </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
                       <p className="bg-[#FFC37C] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>100</p>
                   </div>
                 </TableCell>
@@ -330,17 +330,17 @@ const page = () => {
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
                       <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>1900</p>
                   </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
-                    <p className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
+                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#FFC37C3F]">
                       <p className="bg-[#FFC37C] h-2 w-2 rounded-full"></p>
-                    </p>
+                    </div>
                     <p>100</p>
                   </div>
                 </TableCell>
