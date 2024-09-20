@@ -25,7 +25,7 @@ export default function DashboardLayout({
       });
     }
 
-    if (pathname === "/dashboard/data-providers") {
+    if (pathname === "/dashboard/data-providers" || pathname.includes("/dashboard/data-providers")) {
       SidebarStore.update((s) => {
         s.active = "data-providers";
       });

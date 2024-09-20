@@ -35,19 +35,19 @@ const Sidebar = () => {
   const dataProviderPageLinks: IAccordionItemType[] = [
     {
       title: "MTN",
-      link: "/data-providers/mtn"
+      link: "/dashboard/data-providers/mtn"
     },
     {
       title: "AIRTEL",
-      link: "/data-providers/airtel"
+      link: "/dashboard/data-providers/airtel"
     },
     {
       title: "9 MOBILE",
-      link: "/data-providers/9mobile"
+      link: "/dashboard/data-providers/9mobile"
     },
     {
       title: "GLO",
-      link: "/data-providers/glo"
+      link: "/dashboard/data-providers/glo"
     }
   ]
 
