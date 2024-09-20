@@ -32,6 +32,25 @@ const Sidebar = () => {
     }
   ]
 
+  const dataProviderPageLinks: IAccordionItemType[] = [
+    {
+      title: "MTN",
+      link: "/data-providers/mtn"
+    },
+    {
+      title: "AIRTEL",
+      link: "/data-providers/airtel"
+    },
+    {
+      title: "9 MOBILE",
+      link: "/data-providers/9mobile"
+    },
+    {
+      title: "GLO",
+      link: "/data-providers/glo"
+    }
+  ]
+
 
   const active = SidebarStore.useState((s) => s.active);
 
@@ -61,6 +80,7 @@ const Sidebar = () => {
             active={active === "data-providers" ? true : false}
             title="Data Providers"
             link="/dashboard/data-providers"
+            accordionItems={dataProviderPageLinks}
           />
         </li>
         <li>

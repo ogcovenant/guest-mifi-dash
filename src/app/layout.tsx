@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} text-base`}
+        className={`${nunito.className} text-base overflow-hidden`}
       >
         {children}
       </body>
