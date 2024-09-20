@@ -53,9 +53,10 @@ const Sidebar = () => {
 
 
   const active = SidebarStore.useState((s) => s.active);
+  const isOpen = SidebarStore.useState((s) => s.IsOpen);
 
   return (
-    <div className="w-[15%] bg-[#211E48] flex flex-col justify-between overflow-auto">
+    <div className={`${ isOpen ? "bg-[#211E48] absolute h-full w-full z-10 overflow-auto flex flex-col" : "hidden h-full lg:w-[30%] xl:w-[15%] bg-[#211E48] lg:flex flex-col justify-between overflow-auto"}`}>
       <ul className="">
         <li>
           <SidebarItem
@@ -100,7 +101,7 @@ const Sidebar = () => {
           />
         </li>
       </ul>
-      <div className="border-t-[1px] border-[#3C3980]">
+      <div className="border-t-[1px] border-[#3C3980] mt-5 md:mt-0">
         <ul>
           <li>
             <SidebarItem icon={IoSettingsOutline} title="Settings" />

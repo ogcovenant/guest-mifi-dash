@@ -129,14 +129,14 @@ const page = () => {
 
   return (
     <div className="flex w-full h-full">
-      <div className="bg-[#151236] w-[20%] h-full overflow-auto">
+      <div className="bg-[#151236] w-[30%] xl:w-[20%] h-full overflow-auto hidden md:block">
         <ProgressStatisticsSideBar />
       </div>
-      <div className="w-[80%] p-6 overflow-auto">
+      <div className="w-full md:w-[70%] xl:w-[80%] p-6 overflow-auto">
         <div>
           <h1 className="text-[#FAFAFF] font-bold text-2xl">Dashboard</h1>
-          <div className="mt-5 flex gap-4">
-            <div className="p-4 border-2 border-[#23215B] bg-[#13113C] rounded-lg w-[33%]">
+          <div className="mt-5 flex flex-wrap xl:flex-nowrap gap-4">
+            <div className="p-4 border-2 border-[#23215B] bg-[#13113C] rounded-lg w-full lg:w-[45%] xl:w-[33%]">
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-2">
                   <p className="text-[#FAFAFF]">On Account</p>
@@ -156,7 +156,7 @@ const page = () => {
                 </p>
               </div>
             </div>
-            <div className="p-4 border-2 border-[#23215B] bg-[#13113C] rounded-lg w-[33%]">
+            <div className="p-4 border-2 border-[#23215B] bg-[#13113C] rounded-lg w-full lg:w-[45%] xl:w-[33%]">
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-2">
                   <p className="text-[#FAFAFF]">Partners</p>
@@ -176,7 +176,7 @@ const page = () => {
                 </p>
               </div>
             </div>
-            <div className="p-4 border-2 border-[#23215B] bg-[#13113C] rounded-lg w-[33%]">
+            <div className="p-4 border-2 border-[#23215B] bg-[#13113C] rounded-lg w-full lg:w-[45%] xl:w-[33%]">
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-2">
                   <p className="text-[#FAFAFF]">Active Devices</p>

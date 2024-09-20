@@ -48,12 +48,12 @@ export default function DashboardLayout({
     <html lang="en">
       <body>
         <main className="h-screen">
-          <div className="h-[15%]">
+          <div className="h-[15%] lg:h-[10%] xl:h-[15%]">
             <Header />
           </div>
-          <div className="flex h-[85%] pt-0">
+          <div className="flex h-[85%] lg:h-[90%] xl:h-[85%] pt-0">
             <Sidebar />
-            <div className="w-[85%] bg-[#19173D]">{children}</div>
+            <div className="w-full lg:w-[85%] bg-[#19173D]">{children}</div>
           </div>
         </main>
       </body>
