@@ -17,8 +17,8 @@ const page = () => {
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">Partners</h1>
-      <div className="mt-3 flex gap-6">
-        <div className="border-2 border-[#23215B] bg-[#13113C] p-3 w-[33%] rounded-lg">
+      <div className="mt-3 flex flex-wrap md:flex-nowrap gap-6">
+        <div className="border-2 border-[#23215B] bg-[#13113C] p-3 w-full md:w-[33%] rounded-lg">
           <div className="flex justify-between items-center">
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF384] to-[#FFB979] font-bold">
               Top Countries
@@ -40,7 +40,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="border-2 border-[#23215B] bg-[#13113C] p-3 w-[33%] rounded-lg">
+        <div className="border-2 border-[#23215B] bg-[#13113C] p-3 w-full md:w-[33%] rounded-lg">
           <div className="flex justify-between items-center">
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF384] to-[#FFB979] font-bold">
               #1 Top City
@@ -67,7 +67,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="border-2 border-[#23215B] bg-[#13113C] p-3 w-[33%] rounded-lg">
+        <div className="border-2 border-[#23215B] bg-[#13113C] p-3 w-full md:w-[33%] rounded-lg">
           <div className="flex justify-between items-center">
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF384] to-[#FFB979] font-bold">
               Top Partner
@@ -100,12 +100,12 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5">
-        <div className="flex items-center justify-between">
+      <div className="mt-8">
+        <div className="flex flex-col md:flex-row justify-start items-center md:justify-between">
           <h3 className="text-[#B1AFCD] text-xl font-bold">
             Partner Statistics
           </h3>
-          <div className="text-[#ECECFF] flex items-center bg-[#2B275D] p-2 rounded-lg justify-between w-[30%]">
+          <div className="text-[#ECECFF] flex items-center bg-[#2B275D] p-2 rounded-lg justify-between w-full md:w-[30%] mt-2">
             <IoIosSearch className="w-[10%]" />
             <input
               type="text"
@@ -114,7 +114,7 @@ const page = () => {
             />
             <VscSettings className="justify-between" />
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 mt-3">
             <button className="flex items-center justify-between p-4 gap-2 bg-[#2B275D] text-white rounded-lg">
               <p>New Partner</p>
               <FaPlus />
@@ -164,9 +164,11 @@ const page = () => {
                 <TableCell className="text-center text-[#ECECFF]">
                   $350
                 </TableCell>
-                <TableCell className="text-center text-[#ECECFF] flex gap-3 items-center justify-center">
-                  <PiBroadcastFill className="text-[#AB50E3] text-xl" />
-                  <p>2000</p>
+                <TableCell className="text-center text-[#ECECFF]">
+                  <div className="flex gap-3 items-center justify-center">
+                    <PiBroadcastFill className="text-[#AB50E3] text-xl" />
+                    <p>2000</p>
+                  </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
@@ -196,9 +198,11 @@ const page = () => {
                 <TableCell className="text-center text-[#ECECFF]">
                   $350
                 </TableCell>
-                <TableCell className="text-center text-[#ECECFF] flex gap-3 items-center justify-center">
-                  <PiBroadcastFill className="text-[#AB50E3] text-xl" />
-                  <p>2000</p>
+                <TableCell className="text-center text-[#ECECFF]">
+                  <div className="flex gap-3 items-center justify-center">
+                    <PiBroadcastFill className="text-[#AB50E3] text-xl" />
+                    <p>2000</p>
+                  </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
@@ -228,9 +232,11 @@ const page = () => {
                 <TableCell className="text-center text-[#ECECFF]">
                   $350
                 </TableCell>
-                <TableCell className="text-center text-[#ECECFF] flex gap-3 items-center justify-center">
-                  <PiBroadcastFill className="text-[#AB50E3] text-xl" />
-                  <p>2000</p>
+                <TableCell className="text-center text-[#ECECFF]">
+                  <div className="flex gap-3 items-center justify-center">
+                    <PiBroadcastFill className="text-[#AB50E3] text-xl" />
+                    <p>2000</p>
+                  </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
@@ -260,9 +266,11 @@ const page = () => {
                 <TableCell className="text-center text-[#ECECFF]">
                   $350
                 </TableCell>
-                <TableCell className="text-center text-[#ECECFF] flex gap-3 items-center justify-center">
-                  <PiBroadcastFill className="text-[#AB50E3] text-xl" />
-                  <p>2000</p>
+                <TableCell className="text-center text-[#ECECFF]">
+                  <div className="flex gap-3 items-center justify-center">
+                    <PiBroadcastFill className="text-[#AB50E3] text-xl" />
+                    <p>2000</p>
+                  </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
@@ -292,9 +300,11 @@ const page = () => {
                 <TableCell className="text-center text-[#ECECFF]">
                   $350
                 </TableCell>
-                <TableCell className="text-center text-[#ECECFF] flex gap-3 items-center justify-center">
-                  <PiBroadcastFill className="text-[#AB50E3] text-xl" />
-                  <p>2000</p>
+                <TableCell className="text-center text-[#ECECFF]">
+                  <div className="flex gap-3 items-center justify-center">
+                    <PiBroadcastFill className="text-[#AB50E3] text-xl" />
+                    <p>2000</p>
+                  </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
@@ -324,9 +334,11 @@ const page = () => {
                 <TableCell className="text-center text-[#ECECFF]">
                   $350
                 </TableCell>
-                <TableCell className="text-center text-[#ECECFF] flex gap-3 items-center justify-center">
-                  <PiBroadcastFill className="text-[#AB50E3] text-xl" />
-                  <p>2000</p>
+                <TableCell className="text-center text-[#ECECFF]">
+                  <div className="flex gap-3 items-center justify-center">
+                    <PiBroadcastFill className="text-[#AB50E3] text-xl" />
+                    <p>2000</p>
+                  </div>
                 </TableCell>
                 <TableCell className="text-center text-[#ECECFF]">
                   <div className="flex gap-3 items-center justify-center">
