@@ -43,8 +43,8 @@ const page = () => {
         </div>
         <div className="p-3">
           <form className="flex flex-col gap-6">
-            <div className="flex justify-between gap-16">
-              <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+              <div className="flex flex-col gap-2 w-full md:w-[50%]">
                 <label htmlFor="modelName" className="text-white font-semibold">
                   Model name
                 </label>
@@ -58,7 +58,7 @@ const page = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-2 w-[50%]">
+              <div className="flex flex-col gap-2 w-full md:w-[50%]">
                 <label htmlFor="modelNo" className="text-white font-semibold">
                   Model number
                 </label>
@@ -74,8 +74,8 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between gap-16">
-              <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+              <div className="flex flex-col gap-2 w-full md:w-[50%]">
                 <label htmlFor="manufacturersName" className="text-white font-semibold">
                   Manufacturer Name
                 </label>
@@ -89,7 +89,7 @@ const page = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-2 w-[50%]">
+              <div className="flex flex-col gap-2 w-full md:w-[50%]">
                 <label htmlFor="network" className="text-white font-semibold">
                   Network
                 </label>
@@ -104,8 +104,8 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between gap-16">
-              <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+              <div className="flex flex-col gap-2 w-full md:w-[50%]">
                 <label htmlFor="simType" className="text-white font-semibold">
                   SIM Type
                 </label>
@@ -119,7 +119,7 @@ const page = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-2 w-[50%]">
+              <div className="flex flex-col gap-2 w-full md:w-[50%]">
                 <label
                   htmlFor="battery"
                   className="text-white font-semibold"
@@ -137,7 +137,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[35%] self-end">
+            <div className="w-full md:w-[35%] md:self-end">
               <button className="bg-[#7C4CFF] text-white font-bold p-4 w-full rounded-xl">
                 Done
               </button>
