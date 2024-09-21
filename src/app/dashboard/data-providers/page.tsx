@@ -14,8 +14,8 @@ const page = () => {
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">Data Providers</h1>
-      <div className="mt-3 flex gap-6">
-        <div className="w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
+      <div className="mt-3 flex flex-wrap md:flex-nowrap gap-6">
+        <div className="w-full md:w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
           <div className="bg-[#13113C] rounded-lg p-5">
             <div className="flex gap-3 items-center">
               <img src="/mtn.png" alt="MTN logo" className="w-14 h-14" />
@@ -37,7 +37,7 @@ const page = () => {
             <p className="text-[#23D4D4] mt-4">View more</p>
           </div>
         </div>
-        <div className="w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
+        <div className="w-full md:w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
           <div className="bg-[#13113C] rounded-lg p-5">
             <div className="flex gap-3 items-center">
               <img src="/airtel.png" alt="Airtel logo" className="w-14 h-14" />
@@ -59,7 +59,7 @@ const page = () => {
             <p className="text-[#23D4D4] mt-4">View more</p>
           </div>
         </div>
-        <div className="w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
+        <div className="w-full md:w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
           <div className="bg-[#13113C] rounded-lg p-5">
             <div className="flex gap-3 items-center">
               <img
@@ -85,7 +85,7 @@ const page = () => {
             <p className="text-[#23D4D4] mt-4">View more</p>
           </div>
         </div>
-        <div className="w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
+        <div className="w-full md:w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
           <div className="bg-[#13113C] rounded-lg p-5">
             <div className="flex gap-3 items-center">
               <img src="/glo.png" alt="Glo logo" className="w-14 h-14" />
@@ -110,11 +110,11 @@ const page = () => {
       </div>
       <div className="mt-8">
         <div className="flex items-center justify-between">
-          <div className="flex w-[50%] items-center gap-4">
+          <div className="flex flex-col md:flex-row w-[60%] md:w-[50%] items-center gap-4">
             <h3 className="text-[#B1AFCD] text-xl font-bold">
               Data consumption
             </h3>
-            <div className="text-[#ECECFF] flex items-center bg-[#2B275D] p-2 rounded-lg justify-between w-[60%]">
+            <div className="text-[#ECECFF] flex items-center bg-[#2B275D] p-2 rounded-lg justify-between w-full md:w-[60%]">
               <IoIosSearch className="w-[10%]" />
               <input
                 type="text"
