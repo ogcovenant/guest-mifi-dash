@@ -16,38 +16,38 @@ const Sidebar = () => {
   const partnerPageLinks: IAccordionItemType[] = [
     {
       title: "Countries",
-      link: "/dashboard/partners/countries"
+      link: "/dashboard/admin/partners/countries"
     },
     {
       title: "City",
-      link: "/dashboard/partners/cities"
+      link: "/dashboard/admin/partners/cities"
     },
     {
       title: "Partner",
-      link: "/dashboard/partners/partner"
+      link: "/dashboard/admin/partners/partner"
     },
     {
       title: "New Distributor",
-      link: "/dashboard/partners/new"
+      link: "/dashboard/admin/partners/new"
     }
   ]
 
   const dataProviderPageLinks: IAccordionItemType[] = [
     {
       title: "MTN",
-      link: "/dashboard/data-providers/mtn"
+      link: "/dashboard/admin/data-providers/mtn"
     },
     {
       title: "AIRTEL",
-      link: "/dashboard/data-providers/airtel"
+      link: "/dashboard/admin/data-providers/airtel"
     },
     {
       title: "9 MOBILE",
-      link: "/dashboard/data-providers/9mobile"
+      link: "/dashboard/admin/data-providers/9mobile"
     },
     {
       title: "GLO",
-      link: "/dashboard/data-providers/glo"
+      link: "/dashboard/admin/data-providers/glo"
     }
   ]
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
             icon={MdDashboard}
             active={active === "dashboard" ? true : false}
             title="Dashboard"
-            link="/dashboard"
+            link="/dashboard/admin"
           />
         </li>
         <li>
@@ -71,7 +71,7 @@ const Sidebar = () => {
             icon={MdPeople}
             active={active === "partners" ? true : false}
             title="Partners"
-            link="/dashboard/partners"
+            link="/dashboard/admin/partners"
             accordionItems={partnerPageLinks}
           />
         </li>
@@ -80,7 +80,7 @@ const Sidebar = () => {
             icon={TbChartBubbleFilled}
             active={active === "data-providers" ? true : false}
             title="Data Providers"
-            link="/dashboard/data-providers"
+            link="/dashboard/admin/data-providers"
             accordionItems={dataProviderPageLinks}
           />
         </li>
@@ -89,7 +89,7 @@ const Sidebar = () => {
             icon={MdAccountBalanceWallet}
             active={active === "earnings" ? true : false}
             title="Earnings"
-            link="/dashboard/earnings"
+            link="/dashboard/admin/earnings"
           />
         </li>
         <li>
@@ -97,7 +97,7 @@ const Sidebar = () => {
             icon={FcAddImage}
             active={active === "add-product" ? true : false}
             title="Add Product"
-            link="/dashboard/add-product"
+            link="/dashboard/admin/add-product"
           />
         </li>
       </ul>

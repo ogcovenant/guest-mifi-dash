@@ -8,7 +8,7 @@ const Page = () => {
           <Logo isDark={true} />
         </div>
         <div className="text-center">
-          <h1 className="font-bold text-2xl">Admin Login</h1>
+          <h1 className="font-bold text-2xl">Login</h1>
           <p className="font-semibold">
             Please enter your email and password to continue
           </p>
