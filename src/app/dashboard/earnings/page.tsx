@@ -9,18 +9,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { PiBroadcastFill } from "react-icons/pi";
 
 const page = () => {
   return (
     <div className="p-6 h-full w-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">Earnings in Nigeria</h1>
       <div className="flex justify-between items-center mt-5">
-        <div className="flex items-center w-[60%] gap-5">
+        <div className="flex flex-col md:flex-row items-center w-[60%] gap-5">
           <h2 className="text-xl text-[#B1AFCD] font-bold">
             Earning statistics
           </h2>
-          <div className="text-[#ECECFF] flex items-center bg-[#2B275D] p-2 rounded-lg justify-between w-[50%]">
+          <div className="text-[#ECECFF] flex items-center bg-[#2B275D] p-2 rounded-lg justify-between w-full md:w-[50%]">
             <IoIosSearch className="w-[10%]" />
             <input
               type="text"
