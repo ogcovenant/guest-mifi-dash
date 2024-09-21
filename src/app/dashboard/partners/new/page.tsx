@@ -12,8 +12,8 @@ const page = () => {
       <h1 className="text-[#FAFAFF] font-bold text-2xl">New Partner</h1>
       <div className="mt-8">
         <form className="flex flex-col gap-6">
-          <div className="flex justify-between gap-16">
-            <div className="flex flex-col gap-2 w-[50%]">
+          <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label htmlFor="fullName" className="text-white font-semibold">
                 Full Name
               </label>
@@ -27,7 +27,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label htmlFor="distType" className="text-white font-semibold">
                 Distributor type
               </label>
@@ -43,8 +43,8 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-16">
-            <div className="flex flex-col gap-2 w-[50%]">
+          <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label htmlFor="address" className="text-white font-semibold">
                 Address
               </label>
@@ -58,7 +58,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label htmlFor="email" className="text-white font-semibold">
                 Email
               </label>
@@ -73,8 +73,8 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-16">
-            <div className="flex flex-col gap-2 w-[50%]">
+          <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label htmlFor="phoneNo" className="text-white font-semibold">
                 Phone number
               </label>
@@ -88,7 +88,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="pickLocation"
                 className="text-white font-semibold"
@@ -106,8 +106,8 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-16">
-            <div className="flex flex-col gap-2 w-[50%]">
+          <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="contactPerson"
                 className="text-white font-semibold"
@@ -124,7 +124,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="noOfAssignedDevices"
                 className="text-white font-semibold"
@@ -142,8 +142,8 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-16">
-            <div className="flex flex-col gap-2 w-[50%]">
+          <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="operatorName"
                 className="text-white font-semibold"
@@ -160,7 +160,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="operatorRole"
                 className="text-white font-semibold"
@@ -181,8 +181,8 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-16">
-            <div className="flex flex-col gap-2 w-[50%]">
+          <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="operatorPhoneNo"
                 className="text-white font-semibold"
@@ -199,7 +199,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-[50%]">
+            <div className="flex flex-col gap-2 w-full md:w-[50%]">
               <label
                 htmlFor="operatorEmail"
                 className="text-white font-semibold"
@@ -217,7 +217,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="w-[35%] self-end">
+          <div className="w-full md:w-[35%] md:self-end">
             <button className="bg-[#7C4CFF] text-white font-bold p-4 w-full rounded-xl">
               Done
             </button>
