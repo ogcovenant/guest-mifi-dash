@@ -14,33 +14,39 @@ export default function DashboardLayout({
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === "/dashboard") {
+    if (pathname === "/dashboard/admin" || pathname === "/dashboard/partner") {
       SidebarStore.update((s) => {
         s.active = "dashboard";
       });
     }
-    if (pathname === "/dashboard/partners" || pathname.includes("/dashboard/partners")) {
+    if (pathname === "/dashboard/admin/partners" || pathname.includes("/dashboard/admin/partners")) {
       SidebarStore.update((s) => {
         s.active = "partners";
       });
     }
 
-    if (pathname === "/dashboard/data-providers" || pathname.includes("/dashboard/data-providers")) {
+    if (pathname === "/dashboard/admin/data-providers" || pathname.includes("/dashboard/admin/data-providers")) {
       SidebarStore.update((s) => {
         s.active = "data-providers";
       });
     }
 
-    if (pathname === "/dashboard/earnings") {
+    if (pathname === "/dashboard/admin/earnings") {
       SidebarStore.update((s) => {
         s.active = "earnings";
       });
     }
 
-    if (pathname === "/dashboard/add-product") {
+    if (pathname === "/dashboard/admin/add-product") {
       SidebarStore.update((s) => {
         s.active = "add-product";
       });
+    }
+
+    if(pathname === "/dashboard/partner/billings"){
+      SidebarStore.update((s) => {
+        s.active = "billings"
+      })
     }
   }, []);
 

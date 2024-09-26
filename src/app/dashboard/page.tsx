@@ -15,7 +15,6 @@ const page = () => {
     }else{
       router.replace("/dashboard/partner");
     }
-
   }, [])
 
   return (
