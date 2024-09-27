@@ -60,6 +60,12 @@ export default function DashboardLayout({
         s.active = "notifications"
       })
     }
+
+    if(pathname === "/dashboard/partner/history"){
+      SidebarStore.update((s) => {
+        s.active = "history"
+      })
+    }
   }, []);
 
   return (
