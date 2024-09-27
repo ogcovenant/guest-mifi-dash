@@ -183,7 +183,12 @@ const Sidebar = () => {
       <div className="border-t-[1px] border-[#3C3980] mt-5 md:mt-0">
         <ul>
           <li>
-            <SidebarItem icon={IoSettingsOutline} title="Settings" />
+            <SidebarItem
+              icon={IoSettingsOutline}
+              title="Settings"
+              active={active === "settings" ? true : false}
+              link={userType === "partner" ? "/dashboard/partner/settings" : ""}
+            />
             <SidebarItem icon={IoPowerOutline} title="Logout" />
           </li>
         </ul>

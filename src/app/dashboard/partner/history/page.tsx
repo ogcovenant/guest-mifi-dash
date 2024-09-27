@@ -14,7 +14,7 @@ import {
 } from "react-icons/io";
 import { RiPriceTag2Fill, RiFileDamageFill } from "react-icons/ri";
 import { IoCalendar } from "react-icons/io5";
-import { FaPlus, FaTaxi } from "react-icons/fa6";
+import { FaTaxi } from "react-icons/fa6";
 import { VscSettings } from "react-icons/vsc";
 import { BiExport } from "react-icons/bi";
 
