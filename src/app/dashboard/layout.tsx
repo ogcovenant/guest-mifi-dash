@@ -54,6 +54,12 @@ export default function DashboardLayout({
         s.active = "rentals"
       })
     }
+
+    if(pathname === "/dashboard/partner/notifications"){
+      SidebarStore.update((s) => {
+        s.active = "notifications"
+      })
+    }
   }, []);
 
   return (

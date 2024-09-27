@@ -62,15 +62,15 @@ const Sidebar = () => {
     },
     {
       title: "Due for pickup",
-      link: "/dashboard/partner/rentals/due",
+      link: "/dashboard/partner/rentals/due-for-pickup",
     },
     {
       title: "Due for returns",
-      link: "/dashboard/partner/rentals/returns",
+      link: "/dashboard/partner/rentals/due-for-return",
     },
     {
       title: "Late returns",
-      link: "/dashboard/partner/rentals/late",
+      link: "/dashboard/partner/rentals/late-returns",
     },
     {
       title: "Damaged",
