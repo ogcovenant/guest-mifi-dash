@@ -48,6 +48,12 @@ export default function DashboardLayout({
         s.active = "billings"
       })
     }
+
+    if(pathname === "/dashboard/partner/rentals" || pathname.includes("/dashboard/partner/rentals")){
+      SidebarStore.update((s) => {
+        s.active = "rentals"
+      })
+    }
   }, []);
 
   return (
