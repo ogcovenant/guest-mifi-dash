@@ -1,7 +1,7 @@
 "use client"
 
 import { ISidebarItem } from "@/types/components";
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -18,11 +18,12 @@ const SidebarItem = ({
   accordionItems,
 }: ISidebarItem) => {
 
+  
   const pathname = usePathname()
 
   return (
     <>
-      {/* @ts-ignore */}
+      {/*@ts-expect-error*/}
       {accordionItems?.length > 0 ? (
         <Accordion type="single" collapsible>
           <AccordionItem value={link || ""}>
