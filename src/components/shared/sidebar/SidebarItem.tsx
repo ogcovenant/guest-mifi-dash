@@ -21,9 +21,13 @@ const SidebarItem = ({
   
   const pathname = usePathname()
 
+  if(!accordionItems || accordionItems.length === 0){
+    accordionItems = []
+  }
+
   return (
     <>
-      {/* @ts-ignore */}
+
       {accordionItems?.length > 0 ? (
         <Accordion type="single" collapsible>
           <AccordionItem value={link || ""}>

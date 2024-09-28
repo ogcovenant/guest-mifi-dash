@@ -31,7 +31,7 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const chartData = [
     { date: "2024-04-21", sales: 137 },
     { date: "2024-04-22", sales: 224 },
@@ -114,18 +114,18 @@ const page = () => {
   } satisfies ChartConfig;
 
   const [timeRange, setTimeRange] = useState("90d");
-  const filteredData = chartData.filter((item) => {
-    const date = new Date(item.date);
-    const now = new Date();
-    let daysToSubtract = 90;
-    if (timeRange === "30d") {
-      daysToSubtract = 30;
-    } else if (timeRange === "7d") {
-      daysToSubtract = 7;
-    }
-    now.setDate(now.getDate() - daysToSubtract);
-    return date >= now;
-  });
+  // const filteredData = chartData.filter((item) => {
+  //   const date = new Date(item.date);
+  //   const now = new Date();
+  //   let daysToSubtract = 90;
+  //   if (timeRange === "30d") {
+  //     daysToSubtract = 30;
+  //   } else if (timeRange === "7d") {
+  //     daysToSubtract = 7;
+  //   }
+  //   now.setDate(now.getDate() - daysToSubtract);
+  //   return date >= now;
+  // });
 
   return (
     <div className="flex w-full h-full">
@@ -371,4 +371,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -4,7 +4,7 @@ import { UserStore } from "@/stores/UserStore"
 import { useRouter } from "next/navigation";
 import { useEffect } from "react"
 
-const page = () => {
+const Page = () => {
 
   const userType = UserStore.useState((s) => s.type);
   const router = useRouter();
@@ -15,11 +15,11 @@ const page = () => {
     }else{
       router.replace("/dashboard/partner");
     }
-  }, [])
+  }, [userType])
 
   return (
     <div></div>
   )
 }
 
-export default page
+export default Page

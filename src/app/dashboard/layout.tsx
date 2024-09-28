@@ -72,7 +72,7 @@ export default function DashboardLayout({
         s.active = "settings"
       })
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <html lang="en">
