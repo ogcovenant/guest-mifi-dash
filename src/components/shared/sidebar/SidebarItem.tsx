@@ -23,7 +23,7 @@ const SidebarItem = ({
 
   return (
     <>
-      {/*@ts-expect-error*/}
+      {/* @ts-ignore */}
       {accordionItems?.length > 0 ? (
         <Accordion type="single" collapsible>
           <AccordionItem value={link || ""}>

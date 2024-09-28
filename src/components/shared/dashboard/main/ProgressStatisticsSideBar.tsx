@@ -68,7 +68,7 @@ const ProgressStatisticsSideBar = () => {
               </p>
             </div>
             <div className="flex justify-between items-center text-[#ECECFF] text-xs p-3">
-              <p className="">Yesterday's income</p>
+              <p className="">Yesterday&apos;s income</p>
               <p className="">$1028</p>
             </div>
           </div>
@@ -88,7 +88,7 @@ const ProgressStatisticsSideBar = () => {
               </p>
             </div>
             <div className="flex justify-between items-center text-[#ECECFF] text-xs p-3">
-              <p className="">Yesterday's expense</p>
+              <p className="">Yesterday&apos;s expense</p>
               <p className="">$450</p>
             </div>
           </div>
