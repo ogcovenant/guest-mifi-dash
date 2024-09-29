@@ -1,13 +1,13 @@
 "use client"
 
-import { ISidebarItem } from "@/types/components";
+import { ISidebarItem } from "../../../types/components";
 import React from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "../../../components/ui/accordion";
 import { usePathname } from "next/navigation";
 
 const SidebarItem = ({
