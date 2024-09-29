@@ -5,7 +5,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "../../../../components/ui/table";
 import { IoIosSearch } from "react-icons/io";
 import { VscSettings } from "react-icons/vsc";
 import { BiExport } from "react-icons/bi";

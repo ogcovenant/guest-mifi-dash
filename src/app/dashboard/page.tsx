@@ -1,6 +1,6 @@
 "use client"
 
-import { UserStore } from "@/stores/UserStore"
+import { UserStore } from "../../stores/UserStore"
 import { useRouter } from "next/navigation";
 import { useEffect } from "react"
 

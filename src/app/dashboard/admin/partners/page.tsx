@@ -1,4 +1,4 @@
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "../../../../components/ui/progress";
 import { FaPhone, FaPlus } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
 import { VscSettings } from "react-icons/vsc";
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "../../../../components/ui/table";
 import { PiBroadcastFill } from "react-icons/pi";
 
 const page = () => {

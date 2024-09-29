@@ -1,4 +1,4 @@
-import ProgressStatisticsSideBar from "@/components/shared/dashboard/main/ProgressStatisticsSideBar";
+import ProgressStatisticsSideBar from "../../../components/shared/dashboard/main/ProgressStatisticsSideBar";
 import {
   Table,
   TableBody,
@@ -6,7 +6,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "../../../components/ui/table";
 import { Box1 } from "iconsax-react";
 import { BsFillDeviceSsdFill } from "react-icons/bs";
 import { IoIosTrendingDown, IoIosTrendingUp } from "react-icons/io";

@@ -1,6 +1,6 @@
 "use client";
 
-import { SidebarStore } from "@/stores/SidebarStore";
+import { SidebarStore } from "../../../stores/SidebarStore";
 import { MdDashboard } from "react-icons/md";
 import { MdPeople } from "react-icons/md";
 import { TbChartBubbleFilled } from "react-icons/tb";
@@ -9,8 +9,8 @@ import { FcAddImage } from "react-icons/fc";
 import SidebarItem from "../sidebar/SidebarItem";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoPowerOutline } from "react-icons/io5";
-import { IAccordionItemType } from "@/types/components";
-import { UserStore } from "@/stores/UserStore";
+import { IAccordionItemType } from "../../../types/components";
+import { UserStore } from "../../../stores/UserStore";
 import { FaWifi } from "react-icons/fa6";
 import { IoCard } from "react-icons/io5";
 import { FaBell } from "react-icons/fa6";

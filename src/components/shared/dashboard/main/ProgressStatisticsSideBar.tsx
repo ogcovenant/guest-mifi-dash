@@ -7,8 +7,8 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
-import { UserStore } from "@/stores/UserStore";
+} from "../../../../components/ui/chart";
+import { UserStore } from "../../../../stores/UserStore";
 
 const ProgressStatisticsSideBar = () => {
   const chartData = [

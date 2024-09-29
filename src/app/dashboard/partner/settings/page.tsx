@@ -1,6 +1,6 @@
 import { BiExport } from "react-icons/bi";
 import { FaFileUpload } from "react-icons/fa";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "../../../../components/ui/checkbox";
 
 const page = () => {
   return (

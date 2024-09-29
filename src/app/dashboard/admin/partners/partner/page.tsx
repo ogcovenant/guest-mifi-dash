@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "../../../../../components/ui/table";
 import { PiBroadcastFill } from "react-icons/pi";
 
 const page = () => {

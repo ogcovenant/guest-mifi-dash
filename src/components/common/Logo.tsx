@@ -1,6 +1,6 @@
 "use client"
 
-import { ILogo } from "@/types/components";
+import { ILogo } from "../../types/components";
 import React from "react";
 
 const Logo = ({ isDark }: ILogo) => {

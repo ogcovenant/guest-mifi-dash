@@ -5,7 +5,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "../../../../../components/ui/table";
 import { IoCalendar } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 

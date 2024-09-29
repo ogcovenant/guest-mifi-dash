@@ -1,7 +1,7 @@
-import Logo from "@/components/common/Logo";
+import Logo from "../../../components/common/Logo";
 import { GoSearch } from "react-icons/go";
 import { FaBars, FaBell } from "react-icons/fa6";
-import { SidebarStore } from "@/stores/SidebarStore";
+import { SidebarStore } from "../../../stores/SidebarStore";
 
 const Header = () => {
   const isOpen = SidebarStore.useState((s) => s.IsOpen);
