@@ -1,6 +1,6 @@
 "use client";
 
-import ProgressStatisticsSideBar from "@/components/shared/dashboard/main/ProgressStatisticsSideBar";
+import ProgressStatisticsSideBar from "../../../components/shared/dashboard/main/ProgressStatisticsSideBar";
 import { RiWalletFill } from "react-icons/ri";
 import { IoIosTrendingDown, IoIosTrendingUp } from "react-icons/io";
 import { Box1 } from "iconsax-react";
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "../../../components/ui/table";
 import {
   ChartConfig,
   ChartContainer,
@@ -21,14 +21,14 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "../../../components/ui/chart";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../../components/ui/select";
 import { useState } from "react";
 
 const Page = () => {
