@@ -32,7 +32,7 @@ const Page = () => {
           <Logo isDark={true} />
         </div>
         <div className="text-center">
-          <h1 className="font-bold text-2xl">Login</h1>
+          <h1 className="font-bold text-2xl">Sign up</h1>
           <p className="font-semibold">
             Please enter your email and password to continue
           </p>
@@ -97,15 +97,15 @@ const Page = () => {
               />
               <label htmlFor="remember-password">Remember Password</label>
             </div>
-            <button className="bg-[#442B88] w-full p-3 rounded-lg text-white font-bold" type="submit">
-              Sign In
+            <button className="bg-[#442B88] w-full p-3 rounded-lg text-white font-bold" type="submit"> 
+              Sign Up
             </button>
           </form>
         </div>
         <p className="mt-3">
-          Are you a new partner?{" "}
-          <a href="/signup" className="text-[#442B88]">
-            Sign up
+          Are you an existing partner?{" "}
+          <a href="/login" className="text-[#442B88]">
+            Login
           </a>
         </p>
       </div>
