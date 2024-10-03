@@ -87,7 +87,7 @@ const Sidebar = () => {
           : "hidden h-full lg:w-[30%] xl:w-[15%] bg-[#211E48] lg:flex flex-col justify-between overflow-auto"
       }`}
     >
-      {userType === "admin" && (
+      {userType === "admin" || userType === "super-admin" && (
         <ul className="">
           <li>
             <SidebarItem
