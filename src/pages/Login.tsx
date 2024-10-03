@@ -6,7 +6,7 @@ import api from "@/utils/api";
 import { ImSpinner8 } from "react-icons/im";
 import { useEffect, useState } from "react";
 import { AxiosError } from "axios";
-import { storeData } from "@/utils/Storage";
+import { getStoredData, storeData } from "@/utils/Storage";
 import toast, { Toaster } from 'react-hot-toast';
 import { UserStore } from "@/store/UserStore";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const userType = UserStore.useState((s) => s.type);
+  const token = getStoredData("token")
 
   const navigate = useNavigate()
 
@@ -67,9 +68,11 @@ const Login = () => {
   });
 
   useEffect(() => {
-    if(userType === "super-admin" || userType === "admin"){
+    if((userType === "super-admin" || userType === "admin") && (token)){
       navigate("/dashboard/admin")
-    }else{
+    }
+
+    if((userType === "user") && (token)){
       navigate("/dashboard/partner")
     }
     

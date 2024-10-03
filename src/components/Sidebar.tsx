@@ -133,7 +133,7 @@ const Sidebar = () => {
           </li>
         </ul>
       )}
-      {userType === "partner" && (
+      {userType === "user" && (
         <ul className="">
           <li>
             <SidebarItem

@@ -141,7 +141,7 @@ const ProgressStatisticsSideBar = () => {
           </div>
         </div>
       )}
-      {userType === "partner" && (
+      {userType === "user" && (
         <div className="mt-8 flex flex-col gap-8">
           <div className="border-2 border-[#1A1E4D] bg-[#24214E] rounded-lg">
             <div className="border-b-[1px] border-[#626263] p-2 flex items-center text-sm justify-between">
