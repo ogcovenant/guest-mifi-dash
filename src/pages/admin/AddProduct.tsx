@@ -56,7 +56,7 @@ const AddProduct = () => {
         <div className="p-4 border-b-[1px] border-[#979797]">
           <p className="text-white font-semibold">Product Details</p>
         </div>
-        <div className="p-3">
+        <div className="p-3 mt-5">
           <form className="flex flex-col gap-6">
             <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-16">
               <div className="flex flex-col gap-2 w-full md:w-[50%]">
