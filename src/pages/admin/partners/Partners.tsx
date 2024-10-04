@@ -16,6 +16,7 @@ import lagos from "@/assets/lagos.png"
 import { UserStore } from "@/store/UserStore";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import api from "@/utils/api";
 
 const Partners = () => {
 
@@ -28,6 +29,16 @@ const Partners = () => {
       navigate("/error")
     }
 
+  }, [])
+
+  const fetchData = async() => {
+    const res = await api.get("/partners")
+
+    console.log(res)
+  }
+
+  useEffect(() => {
+    fetchData()
   }, [])
 
   return (

@@ -44,13 +44,13 @@ const ProgressStatisticsSideBar = () => {
     <div className="p-8 px-4 text-white">
       <div>
         <h1>
-          {userType === "admin" || userType === "super-admin"
+          {(userType === "admin" || userType === "super-admin")
             ? "Progress statistics"
             : "Today's rental statistics"}
         </h1>
         <p className="text-[#B1AFCD]">Mon 19 August, 2024</p>
       </div>
-      {userType === "admin" || userType === "super-admin" && (
+      {(userType === "admin" || userType === "super-admin") && (
         <div className="mt-8 flex flex-col gap-8">
           <div className="border-2 border-[#1A1E4D] bg-[#24214E] rounded-lg">
             <div className="border-b-[1px] border-[#626263] p-2 flex items-center text-sm justify-between">
