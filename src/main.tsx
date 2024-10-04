@@ -30,126 +30,140 @@ import Damaged from "./pages/partner/rentals/Damaged";
 import Notifications from "./pages/partner/Notifications";
 import History from "./pages/partner/History";
 import Settings from "./pages/partner/Settings";
+import ErrorPage from "./pages/ErrorPage";
+import ProtectedRoute from "./pages/ProtectedRoute";
+import { getStoredData } from "./utils/Storage";
+
+const token = getStoredData("token");
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/login",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/signup",
-    element: <Signup />
+    element: <Signup />,
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <ProtectedRoute token={String(token)}>
+        <DashboardLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "/dashboard/admin",
-        element: <AdminDash />
+        element: <AdminDash />,
       },
       {
         path: "/dashboard/admin/partners",
-        element: <Partners />
+        element: <Partners />,
       },
       {
         path: "/dashboard/admin/partners/countries",
-        element: <PartnerCountries />
+        element: <PartnerCountries />,
       },
       {
         path: "/dashboard/admin/partners/cities",
-        element: <PartnerCities />
+        element: <PartnerCities />,
       },
       {
         path: "/dashboard/admin/partners/partner",
-        element: <AllPartners />
+        element: <AllPartners />,
       },
       {
         path: "/dashboard/admin/partners/new",
-        element: <NewPartner />
+        element: <NewPartner />,
       },
       {
         path: "/dashboard/admin/data-providers",
-        element: <DataProviders />
+        element: <DataProviders />,
       },
       {
         path: "/dashboard/admin/data-providers/mtn",
-        element: <MTN />
+        element: <MTN />,
       },
       {
         path: "/dashboard/admin/data-providers/airtel",
-        element: <Airtel />
+        element: <Airtel />,
       },
       {
         path: "/dashboard/admin/data-providers/glo",
-        element: <Glo />
+        element: <Glo />,
       },
       {
         path: "/dashboard/admin/data-providers/9mobile",
-        element: <NineMobile />
+        element: <NineMobile />,
       },
       {
         path: "/dashboard/admin/earnings",
-        element: <Earnings />
+        element: <Earnings />,
       },
       {
         path: "/dashboard/admin/add-product",
-        element: <AddProduct />
+        element: <AddProduct />,
       },
       {
         path: "/dashboard/partner",
-        element: <PartnerDash />
+        element: <PartnerDash />,
       },
       {
         path: "/dashboard/partner/billings",
-        element: <Billings />
+        element: <Billings />,
       },
       {
         path: "/dashboard/partner/rentals",
-        element: <Rentals />
+        element: <Rentals />,
       },
       {
         path: "/dashboard/partner/rentals/new",
-        element: <NewRentals />
+        element: <NewRentals />,
       },
       {
         path: "/dashboard/partner/rentals/due-for-pickup",
-        element: <DueForPickup />
+        element: <DueForPickup />,
       },
       {
         path: "/dashboard/partner/rentals/due-for-return",
-        element: <DueForReturn />
+        element: <DueForReturn />,
       },
       {
         path: "/dashboard/partner/rentals/late-returns",
-        element: <LateReturns />
+        element: <LateReturns />,
       },
       {
         path: "/dashboard/partner/rentals/damaged",
-        element: <Damaged />
+        element: <Damaged />,
       },
       {
         path: "/dashboard/partner/notifications",
-        element: <Notifications />
+        element: <Notifications />,
       },
       {
         path: "/dashboard/partner/history",
-        element: <History />
+        element: <History />,
       },
       {
         path: "/dashboard/partner/settings",
-        element: <Settings />
-      }
-    ]
+        element: <Settings />,
+      },
+    ],
+  },
+  {
+    path: "/error",
+    element: <ErrorPage />
   }
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>
 );

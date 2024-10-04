@@ -1,8 +1,23 @@
 import { BiExport } from "react-icons/bi";
 import { FaFileUpload } from "react-icons/fa";
 import { Checkbox } from "@/components/ui/checkbox";
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Settings = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "super-admin" || userType === "admin"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <div className="flex items-center justify-between">

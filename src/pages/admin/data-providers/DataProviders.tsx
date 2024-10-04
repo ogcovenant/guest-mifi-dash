@@ -13,8 +13,23 @@ import mtn from "@/assets/mtn.png"
 import airtel from "@/assets/airtel.png"
 import glo from "@/assets/glo.png"
 import mobile from "@/assets/9mobile.png"
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const DataProviders = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "user"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">Data Providers</h1>

@@ -1,6 +1,21 @@
 import { Checkbox } from "@/components/ui/checkbox";
+import { UserStore } from "@/store/UserStore";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NewRentals = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "super-admin" || userType === "admin"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">Rentals</h1>

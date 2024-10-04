@@ -9,8 +9,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Airtel = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "user"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 h-full w-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">

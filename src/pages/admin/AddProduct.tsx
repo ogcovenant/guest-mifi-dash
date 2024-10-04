@@ -7,8 +7,23 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import mifi from "@/assets/mifi.png"
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const AddProduct = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "user"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">New product</h1>

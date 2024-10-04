@@ -1,8 +1,23 @@
 import { HiOutlinePencilAlt } from "react-icons/hi";
 import { IoMdLock } from "react-icons/io";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Billings = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "super-admin" || userType === "admin"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <div className="flex justify-between items-center">

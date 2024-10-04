@@ -12,8 +12,23 @@ import { BsFillDeviceSsdFill } from "react-icons/bs";
 import { IoIosTrendingDown, IoIosTrendingUp } from "react-icons/io";
 import { RiWalletFill } from "react-icons/ri";
 import { IoCalendar } from "react-icons/io5";
+import { useEffect } from "react";
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
 
 const PartnerDash = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "super-admin" || userType === "admin"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="flex w-full h-full">
       <div className="bg-[#151236] w-[30%] xl:w-[20%] h-full overflow-auto hidden md:block">

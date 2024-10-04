@@ -17,8 +17,24 @@ import { IoCalendar } from "react-icons/io5";
 import { FaTaxi } from "react-icons/fa6";
 import { VscSettings } from "react-icons/vsc";
 import { BiExport } from "react-icons/bi";
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const History = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "super-admin" || userType === "admin"){
+      navigate("/error")
+    }
+
+  }, [])
+
+
   return (
     <div className="w-full h-full p-6 overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">History</h1>

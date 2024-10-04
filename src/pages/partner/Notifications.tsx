@@ -1,4 +1,20 @@
+import { UserStore } from "@/store/UserStore"
+import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+
 const Notifications = () => {
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "super-admin" || userType === "admin"){
+      navigate("/error")
+    }
+
+  }, [])
+
   return (
     <div className="p-6 w-full h-full overflow-auto">
       <h1 className="text-[#FAFAFF] font-bold text-2xl">Notifications</h1>

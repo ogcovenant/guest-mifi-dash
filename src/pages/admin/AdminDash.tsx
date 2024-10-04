@@ -29,7 +29,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { UserStore } from "@/store/UserStore";
+import { useNavigate } from "react-router-dom";
 
 const AdminDash = () => {
   const chartData = [
@@ -126,6 +128,17 @@ const AdminDash = () => {
   //   now.setDate(now.getDate() - daysToSubtract);
   //   return date >= now;
   // });
+
+  const userType = UserStore.useState((s) => s.type)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(userType === "user"){
+      navigate("/error")
+    }
+
+  }, [])
 
   return (
     <div className="flex w-full h-full">
