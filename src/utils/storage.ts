@@ -15,5 +15,5 @@ const deleteData = (key: string) => {
 export {
   storeData,
   getStoredData,
-  deleteData,
+  deleteData
 }
