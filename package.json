@@ -5,11 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm i typescript -g @types/node && npm install --only=dev && tsc -b && vite build",
+    "build": "npm i typescript -g @types/node && npm install && tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "tsc": "./node_modules/typescript/bin/tsc",
-    "postinstall": "npm run tsc"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
