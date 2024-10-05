@@ -6,7 +6,7 @@ import api from "@/utils/api";
 import { ImSpinner8 } from "react-icons/im";
 import { useEffect, useState } from "react";
 import { AxiosError } from "axios";
-import { getStoredData, storeData } from "@/utils/Storage";
+import { getStoredData, storeData } from "@/utils/storage";
 import toast, { Toaster } from 'react-hot-toast';
 import { UserStore } from "@/store/UserStore";
 import { useNavigate } from "react-router-dom";

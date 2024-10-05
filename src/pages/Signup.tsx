@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { AxiosError } from "axios";
 import api from "@/utils/api";
 import { ImSpinner8 } from "react-icons/im";
-import { getStoredData } from "@/utils/Storage";
+import { getStoredData } from "@/utils/storage";
 import { UserStore } from "@/store/UserStore";
 
 const Signup = () => {

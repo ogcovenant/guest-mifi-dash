@@ -1,5 +1,5 @@
 import axios from "axios"
-import { getStoredData } from "./Storage"
+import { getStoredData } from "./storage"
 
 
 const token = getStoredData("token")

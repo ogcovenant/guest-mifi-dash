@@ -32,7 +32,7 @@ import History from "./pages/partner/History";
 import Settings from "./pages/partner/Settings";
 import ErrorPage from "./pages/ErrorPage";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import { getStoredData } from "./utils/Storage";
+import { getStoredData } from "./utils/storage";
 
 const token = getStoredData("token");
 
