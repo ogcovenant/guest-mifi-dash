@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm i typescript -g @types/node && npm install && tsc -b && vite build",
+    "build": "npm install && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
