@@ -12,34 +12,36 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PiBroadcastFill } from "react-icons/pi";
-import lagos from "@/assets/lagos.png"
+import lagos from "@/assets/lagos.png";
 import { UserStore } from "@/store/UserStore";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import api from "@/utils/api";
 
 const Partners = () => {
-
-  const userType = UserStore.useState((s) => s.type)
-  const navigate = useNavigate()
+  const userType = UserStore.useState((s) => s.type);
+  const navigate = useNavigate();
 
   useEffect(() => {
-
-    if(userType === "user"){
-      navigate("/error")
+    if (userType === "user") {
+      navigate("/error");
     }
+  }, []);
 
-  }, [])
+  const fetchData = async () => {
+    try {
+      const res = await api.get("/partners");
 
-  const fetchData = async() => {
-    const res = await api.get("/partners")
-
-    console.log(res)
-  }
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    } finally {
+    }
+  };
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   return (
     <div className="p-6 w-full h-full overflow-auto">

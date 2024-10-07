@@ -9,26 +9,39 @@ import {
 import { IoIosSearch } from "react-icons/io";
 import { VscSettings } from "react-icons/vsc";
 import { BiExport } from "react-icons/bi";
-import mtn from "@/assets/mtn.png"
-import airtel from "@/assets/airtel.png"
-import glo from "@/assets/glo.png"
-import mobile from "@/assets/9mobile.png"
+import mtn from "@/assets/mtn.png";
+import airtel from "@/assets/airtel.png";
+import glo from "@/assets/glo.png";
+import mobile from "@/assets/9mobile.png";
 import { UserStore } from "@/store/UserStore";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import api from "@/utils/api";
 
 const DataProviders = () => {
-
-  const userType = UserStore.useState((s) => s.type)
-  const navigate = useNavigate()
+  const userType = UserStore.useState((s) => s.type);
+  const navigate = useNavigate();
 
   useEffect(() => {
-
-    if(userType === "user"){
-      navigate("/error")
+    if (userType === "user") {
+      navigate("/error");
     }
+  }, []);
 
-  }, [])
+  const fetchData = async () => {
+    try {
+      const res = await api.get("/data-providers");
+
+      console.log(res)
+    } catch (err) {
+      console.log(err)
+    } finally {
+    }
+  };
+
+  useEffect(() => {
+    fetchData()
+  }, []);
 
   return (
     <div className="p-6 w-full h-full overflow-auto">
@@ -81,11 +94,7 @@ const DataProviders = () => {
         <div className="w-full md:w-[25%] hover:bg-gradient-to-tr from-[#5AC8C8] to-[#4B00C8] p-[2px] rounded-xl">
           <div className="bg-[#13113C] rounded-lg p-5">
             <div className="flex gap-3 items-center">
-              <img
-                src={mobile}
-                alt="9Mobile logo"
-                className="w-14 h-14"
-              />
+              <img src={mobile} alt="9Mobile logo" className="w-14 h-14" />
               <div className="">
                 <p className="text-[#FAFAFF] font-bold">9 Mobile</p>
                 <p className="text-[#D0CFDE]">Telco</p>
