@@ -65,16 +65,16 @@ const Signup = () => {
   });
 
 
-  // useEffect(() => {
-  //   if((userType === "super-admin" || userType === "admin") && (token)){
-  //     navigate("/dashboard/admin")
-  //   }
+  useEffect(() => {
+    if((userType === "super-admin" || userType === "admin") && (token)){
+      navigate("/dashboard/admin")
+    }
 
-  //   if((userType === "user") && (token)){
-  //     navigate("/dashboard/partner")
-  //   }
+    if((userType === "user") && (token)){
+      navigate("/dashboard/partner")
+    }
     
-  // }, [userType])
+  }, [userType])
 
   return (
     <div className="flex w-full h-screen bg-[#19173D]">
@@ -84,7 +84,7 @@ const Signup = () => {
           <Logo isDark={false} />
         </div>
         <div className="text-center">
-          <h1 className="font-bold text-2xl">Forgot Password?</h1>
+          <h1 className="font-bold text-2xl">Sign up</h1>
           <p className="font-semibold">
             Please enter your email and password to continue
           </p>

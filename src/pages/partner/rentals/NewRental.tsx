@@ -119,7 +119,7 @@ const NewRentals = () => {
               <label htmlFor="currency" className="text-white/80">
                 Currency
               </label>
-              <Select name="dataProvider" onValueChange={(e) => {}}>
+              <Select name="dataProvider">
                 <SelectTrigger className="outline-none ring-0 border-none p-5 rounded-xl w-full bg-[#24214E] text-[#EFEFEF]">
                   <SelectValue placeholder="Select payment currency" />
                 </SelectTrigger>
