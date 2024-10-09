@@ -51,6 +51,10 @@ const router = createBrowserRouter([
     element: <Signup />,
   },
   {
+    path: "/forgot-password",
+    element: <Signup />,
+  },
+  {
     path: "/dashboard",
     element: (
       <ProtectedRoute token={String(token)}>

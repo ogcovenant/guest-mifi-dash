@@ -1,7 +1,7 @@
 import Logo from "@/components/Logo";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import wifiSymbol from "@/assets/wifi-symbol.png";
+import lock from "@/assets/fp.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
@@ -65,26 +65,26 @@ const Signup = () => {
   });
 
 
-  useEffect(() => {
-    if((userType === "super-admin" || userType === "admin") && (token)){
-      navigate("/dashboard/admin")
-    }
+  // useEffect(() => {
+  //   if((userType === "super-admin" || userType === "admin") && (token)){
+  //     navigate("/dashboard/admin")
+  //   }
 
-    if((userType === "user") && (token)){
-      navigate("/dashboard/partner")
-    }
+  //   if((userType === "user") && (token)){
+  //     navigate("/dashboard/partner")
+  //   }
     
-  }, [userType])
+  // }, [userType])
 
   return (
-    <div className="flex w-full h-screen">
+    <div className="flex w-full h-screen bg-[#19173D]">
       <Toaster />
       <div className="w-full md:w-[60%] flex flex-col h-full items-center justify-center p-8 lg:p-12 xl:p-0">
-        <div className="flex justify-center mb-4 md:hidden">
-          <Logo isDark={true} />
+        <div className="flex justify-center mb-4">
+          <Logo isDark={false} />
         </div>
         <div className="text-center">
-          <h1 className="font-bold text-2xl">Sign up</h1>
+          <h1 className="font-bold text-2xl">Forgot Password?</h1>
           <p className="font-semibold">
             Please enter your email and password to continue
           </p>
@@ -192,9 +192,8 @@ const Signup = () => {
           </a>
         </p>
       </div>
-      <div className="bg-[#B2EBF2] w-[40%] md:flex flex-col items-center justify-center hidden">
-        <Logo isDark={true} />
-        <img src={wifiSymbol} alt="Wifi illustration" className="w-[80%]" />
+      <div className="w-[40%] md:flex items-center justify-center hidden">
+        <img src={lock} alt="Secure illustration" className="w-[80%] h-[90%]" />
       </div>
     </div>
   );
