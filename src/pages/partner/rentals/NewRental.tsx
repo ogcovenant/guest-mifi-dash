@@ -137,7 +137,7 @@ const NewRentals = () => {
               <label htmlFor="paymentMethod" className="text-white/80">
                 Payment Method
               </label>
-              <Select name="dataProvider" onValueChange={(e) => {}}>
+              <Select name="dataProvider">
                 <SelectTrigger className="outline-none ring-0 border-none p-5 rounded-xl w-full bg-[#24214E] text-[#EFEFEF]">
                   <SelectValue placeholder="Select payment method" />
                 </SelectTrigger>
