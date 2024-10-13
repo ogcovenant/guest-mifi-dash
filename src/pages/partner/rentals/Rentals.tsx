@@ -16,23 +16,96 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { BiExport } from "react-icons/bi";
-import { IoCalendar } from "react-icons/io5";
+// import { IoCalendar } from "react-icons/io5";
 import { UserStore } from "@/store/UserStore";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import api from "@/utils/api";
+import toast from "react-hot-toast";
+import { ImSpinner9 } from "react-icons/im";
 
 const Rentals = () => {
-
-  const userType = UserStore.useState((s) => s.type)
-  const navigate = useNavigate()
+  const userType = UserStore.useState((s) => s.type);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (userType === "super-admin" || userType === "admin") {
+      navigate("/error");
+    }
+  }, []);
 
-    if(userType === "super-admin" || userType === "admin"){
-      navigate("/error")
+  const [loading, setLoading] = useState(false);
+  const [orders, setOrders] = useState([]);
+  const [url, setUrl] = useState("");
+  const [nextLink, setNextLink] = useState("");
+  const [prevLink, setPrevLink] = useState("");
+  const [lastLink, setLastLink] = useState("");
+
+  const fetchData = async () => {
+    setLoading(true);
+
+    try {
+      const res = await api.get(url);
+
+      if (res.status === 200) {
+        setOrders(res.data.data);
+        setNextLink(res.data.links.next);
+        setPrevLink(res.data.links.prev);
+        setLastLink(res.data.links.last);
+      }
+
+      console.log(nextLink)
+      console.log(prevLink)
+      console.log(lastLink)
+    } catch (err) {
+      if (err) {
+        toast.error("An unexpected error occured");
+      }
+
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    setUrl("/orders?page=1");
+
+    fetchData();
+  }, []);
+
+  const goToPrev = () => {
+    console.log(prevLink)
+
+    if (prevLink) {
+      setUrl(prevLink);
     }
 
-  }, [])
+    console.log(url)
+    fetchData();
+  };
+
+  const goToNext = () => {
+    console.log(nextLink)
+
+    if (nextLink) {
+      setUrl(nextLink);
+    }
+
+    console.log(url)
+    fetchData();
+  };
+
+  const goToLast = () => {
+    // console.log(lastLink)
+
+    if (lastLink) {
+      setUrl(lastLink);
+    }
+
+    console.log(url)
+    fetchData();
+  };
 
   return (
     <div className="p-6 w-full h-full overflow-auto">
@@ -143,162 +216,91 @@ const Rentals = () => {
           </div>
         </div>
         <div className="mt-8">
-          <Table>
-            <TableHeader>
-              <TableRow className="border-none bg-[#2B275D] hover:bg-[#2B275D]">
-                <TableHead className="text-center text-[#FAFAFF] font-bold">
-                  No.
-                </TableHead>
-                <TableHead className="text-center text-[#FAFAFF] font-bold">
-                  Rental ID
-                </TableHead>
-                <TableHead className="text-center text-[#FAFAFF] font-bold">
-                  Customer Name
-                </TableHead>
-                <TableHead className="text-center text-[#FAFAFF] font-bold">
-                  Pick-up Details
-                </TableHead>
-                <TableHead className="text-center text-[#FAFAFF] font-bold">
-                  Drop-off Details
-                </TableHead>
-                <TableHead className="text-center text-[#FAFAFF] font-bold">
-                  Status
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell className="text-center text-[#ECECFF]">01</TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  #44578M
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Rebecca Funsho
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Eko hotel- 14/07/24
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex justify-center items-center gap-2">
-                    <IoCalendar color="#AB50E3" />
-                    <p>Airport - 29/07/24 </p>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex gap-3 items-center justify-center">
-                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
-                      <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </div>
-                    <p>Completed</p>
-                  </div>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center text-[#ECECFF]">01</TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  #44578M
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Rebecca Funsho
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Eko hotel- 14/07/24
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex justify-center items-center gap-2">
-                    <IoCalendar color="#AB50E3" />
-                    <p>Airport - 29/07/24 </p>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex gap-3 items-center justify-center">
-                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
-                      <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </div>
-                    <p>Completed</p>
-                  </div>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center text-[#ECECFF]">01</TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  #44578M
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Rebecca Funsho
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Eko hotel- 14/07/24
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex justify-center items-center gap-2">
-                    <IoCalendar color="#AB50E3" />
-                    <p>Airport - 29/07/24 </p>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex gap-3 items-center justify-center">
-                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
-                      <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </div>
-                    <p>Completed</p>
-                  </div>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center text-[#ECECFF]">01</TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  #44578M
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Rebecca Funsho
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Eko hotel- 14/07/24
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex justify-center items-center gap-2">
-                    <IoCalendar color="#AB50E3" />
-                    <p>Airport - 29/07/24 </p>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex gap-3 items-center justify-center">
-                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
-                      <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </div>
-                    <p>Completed</p>
-                  </div>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center text-[#ECECFF]">01</TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  #44578M
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Rebecca Funsho
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  Eko hotel- 14/07/24
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex justify-center items-center gap-2">
-                    <IoCalendar color="#AB50E3" />
-                    <p>Airport - 29/07/24 </p>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center text-[#ECECFF]">
-                  <div className="flex gap-3 items-center justify-center">
-                    <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
-                      <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
-                    </div>
-                    <p>Completed</p>
-                  </div>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+          {loading ? (
+            <div className="flex w-full justify-center">
+              <ImSpinner9 color="#FFFFFF" size={28} className="animate-spin" />
+            </div>
+          ) : (
+            <>
+              <Table>
+                <TableHeader>
+                  <TableRow className="border-none bg-[#2B275D] hover:bg-[#2B275D]">
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      No.
+                    </TableHead>
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      Rental ID
+                    </TableHead>
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      Device
+                    </TableHead>
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      Customer Name
+                    </TableHead>
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      Pick-up Operator
+                    </TableHead>
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      Drop-off Operator
+                    </TableHead>
+                    <TableHead className="text-center text-[#FAFAFF] font-bold">
+                      Status
+                    </TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {orders.map((order) => (
+                    <TableRow>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        {/* @ts-ignore */}
+                        {order.id}
+                      </TableCell>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        {/* @ts-ignore */}
+                        {order.user.rental_id}
+                      </TableCell>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        {/* @ts-ignore */}
+                        {order.product.name}
+                      </TableCell>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        {/* @ts-ignore */}
+                        {order.user.name}
+                      </TableCell>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        {/* @ts-ignore */}
+                        {order.pickup_operator.name}
+                      </TableCell>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        {/* @ts-ignore */}
+                        {order.drop_operator.name}
+                      </TableCell>
+                      <TableCell className="text-center text-[#ECECFF]">
+                        <div className="flex gap-3 items-center justify-center">
+                          {/* <div className="h-4 w-4 rounded-full flex justify-center items-center bg-[#C0FF703F]">
+                            <p className="bg-[#C0FF70] h-2 w-2 rounded-full"></p>
+                          </div> */}
+                          {/* @ts-ignore */}
+                          <p>{order.status}</p>
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+              <div className="flex gap-3 justify-center mt-3">
+                <button className="border-[1px] border-white text-white p-1 px-3 rounded-md" onClick={goToPrev}>
+                  Prev
+                </button>
+                <button className="border-[1px] border-white text-white p-1 px-3 rounded-md" onClick={goToNext}>
+                  Next
+                </button>
+                <button className="border-[1px] border-white text-white p-1 px-3 rounded-md" onClick={goToLast}>
+                  Last
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { UserStore } from "@/store/UserStore";
+import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +16,10 @@ const NewRentals = () => {
   const navigate = useNavigate();
 
   const [newGuest, setNewGuest] = useState(false);
+
+  // const formik = useFormik({
+
+  // })
 
   useEffect(() => {
     if (userType === "super-admin" || userType === "admin") {
