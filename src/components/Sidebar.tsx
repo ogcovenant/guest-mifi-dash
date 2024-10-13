@@ -13,6 +13,7 @@ import { FaWifi } from "react-icons/fa6";
 import { IoCard } from "react-icons/io5";
 import { FaBell } from "react-icons/fa6";
 import { RiHistoryFill } from "react-icons/ri";
+import { deleteData } from "@/utils/storage";
 
 const Sidebar = () => {
   const partnerPageLinks: IAccordionItemType[] = [
@@ -78,6 +79,13 @@ const Sidebar = () => {
   const active = SidebarStore.useState((s) => s.active);
   const isOpen = SidebarStore.useState((s) => s.IsOpen);
   const userType = UserStore.useState((s) => s.type);
+
+  const logout = () => {
+    deleteData("token")
+    deleteData("userType")
+
+    window.location.replace("/login")
+  };
 
   return (
     <div
@@ -187,7 +195,13 @@ const Sidebar = () => {
               active={active === "settings" ? true : false}
               link={userType === "partner" ? "/dashboard/partner/settings" : ""}
             />
-            <SidebarItem icon={IoPowerOutline} title="Logout" />
+            <div
+              onClick={() => {
+                logout();
+              }}
+            >
+              <SidebarItem icon={IoPowerOutline} title="Logout" />
+            </div>
           </li>
         </ul>
       </div>

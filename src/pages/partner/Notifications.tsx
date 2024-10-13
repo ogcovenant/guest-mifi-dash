@@ -25,7 +25,7 @@ const Notifications = () => {
         toast.success("Notifications read successfully");
       }
     } catch (err) {
-      toast.error("Error marking notifications as read")
+      toast.error("Error marking notifications as read");
     }
   };
 
@@ -89,23 +89,29 @@ const Notifications = () => {
             </div>
             <p className='text-white mr-10'>8h</p>
           </div> */}
-          {notifications.map((notification) => (
-            <div className="bg-[#2A2757] p-6 flex justify-between">
-              <div className="flex items-center gap-8">
-                <div className="">
-                  <p className="text-white">
-                    {/* <span className="text-[#FFB1B1]">Late return:</span> You are
+          {notifications ? (
+            <>
+              {notifications.map((notification) => (
+                <div className="bg-[#2A2757] p-6 flex justify-between">
+                  <div className="flex items-center gap-8">
+                    <div className="">
+                      <p className="text-white">
+                        {/* <span className="text-[#FFB1B1]">Late return:</span> You are
                     billed $10 per day for each failed returns */}
-                    {notification}
-                  </p>
-                  {/* <p className="mt-1 border-l-8 border-[#B4B4B4] px-2 text-[#B4B4B4]">
+                        {notification}
+                      </p>
+                      {/* <p className="mt-1 border-l-8 border-[#B4B4B4] px-2 text-[#B4B4B4]">
                     Saturday at 9:57 AM
                   </p> */}
+                    </div>
+                  </div>
+                  <p className="text-white mr-10">8h</p>
                 </div>
-              </div>
-              <p className="text-white mr-10">8h</p>
-            </div>
-          ))}
+              ))}
+            </>
+          ) : (
+            <div className="text-white flex justify-center mt-10">You don't have any unread notifications</div>
+          )}
         </div>
       </div>
     </div>
