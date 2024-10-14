@@ -28,7 +28,7 @@ const History = () => {
 
   useEffect(() => {
 
-    if(userType === "super-admin" || userType === "admin"){
+    if(userType === "super-admin" || userType === "admin" || userType === "operator"){
       navigate("/error")
     }
 

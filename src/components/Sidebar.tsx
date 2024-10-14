@@ -141,7 +141,7 @@ const Sidebar = () => {
           </li>
         </ul>
       )}
-      {userType === "user" && (
+      {userType === "partner" && (
         <ul className="">
           <li>
             <SidebarItem
@@ -182,6 +182,35 @@ const Sidebar = () => {
               active={active === "history" ? true : false}
               title="History"
               link="/dashboard/partner/history"
+            />
+          </li>
+        </ul>
+      )}
+      {userType === "operator" && (
+        <ul className="">
+          <li>
+            <SidebarItem
+              icon={MdDashboard}
+              active={active === "dashboard" ? true : false}
+              title="Dashboard"
+              link="/dashboard/partner"
+            />
+          </li>
+          <li>
+            <SidebarItem
+              icon={FaWifi}
+              active={active === "rentals" ? true : false}
+              title="Rentals"
+              link="/dashboard/partner/rentals"
+              accordionItems={rentalsPageLinks}
+            />
+          </li>
+          <li>
+            <SidebarItem
+              icon={FaBell}
+              active={active === "notifications" ? true : false}
+              title="Notifications"
+              link="/dashboard/partner/notifications"
             />
           </li>
         </ul>

@@ -72,7 +72,7 @@ const Login = () => {
       navigate("/dashboard/admin")
     }
 
-    if((userType === "user") && (token)){
+    if((userType === "partner" || userType === "operator") && (token)){
       navigate("/dashboard/partner")
     }
     
